@@ -1,0 +1,48 @@
+ \documentclass{article}
+ \usepackage{algorithm}
+ \usepackage{algpseudocode} % For writing pseudocode
+ \usepackage{amsmath} % For mathematical notation
+ \begin{document}
+ \title{Algorithm Presentation in \LaTeX}
+ \author{}
+ \date{}
+ \maketitle
+ \section{Sample Algorithm}
+ \begin{algorithm}
+ \caption{Recursive Factorial Calculation}
+ \label{alg:factorial}
+ \begin{algorithmic}[1] % Numbering starts at 1
+ \Require $n \geq 0$
+ \Ensure $n!$ (factorial of $n$)
+ \Function{Factorial}{$n$}
+ \If{$n = 0$}
+ \State \Return 1
+ \Else
+ \State \Return $n \times$ \Call{Factorial}{$n-1$}
+ \EndIf
+ \EndFunction
+ \end{algorithmic}
+ \end{algorithm}
+ \end{document}
+ \documentclass{article}
+ \usepackage[ruled,vlined]{algorithm2e} % Algorithm2e package
+ \begin{document}
+ \title{Algorithm Presentation using Algorithm2e}
+ \author{}
+ \date{}
+ \maketitle
+ \section{Sample Algorithm}
+ Below is an example of a simple sorting algorithm.
+ \begin{algorithm}
+ \caption{Bubble Sort Algorithm}
+ \KwIn{Array $A$ of size $n$}
+ \KwOut{Sorted Array $A$}
+ \For{$i = 1$ to $n-1$}{
+ \For{$j = 1$ to $n-i$}{
+ \If{$A[j] > A[j+1]$}{
+ Swap $A[j]$ and $A[j+1]$;
+ }
+ }
+ }
+ \end{algorithm}
+ \end{document}
