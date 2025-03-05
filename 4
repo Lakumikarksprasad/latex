@@ -1,0 +1,28 @@
+\documentclass{article}
+ \usepackage{tikz}
+ \usetikzlibrary{trees}
+ \begin{document}
+ \title{Tree Diagram with Proper Spacing}
+ \author{}
+ \date{}
+ \maketitle
+ \section{Hierarchical Tree with Adjusted Node Spacing}
+ Below is a tree diagram with sufficient spacing between nodes.
+ \begin{center}
+ \begin{tikzpicture}[
+ level distance=2.5cm, % More vertical space
+ sibling distance=4cm % More horizontal space
+ ]
+ % Root node
+ \node {Root}
+ child {node {Child 1}
+ child {node {Grandchild 1.1}}
+ child {node {Grandchild 1.2}}
+ }
+ child {node {Child 2}
+ child {node {Grandchild 2.1}}
+ child {node {Grandchild 2.2}}
+ };
+ \end{tikzpicture}
+ \end{center}
+ \end{document}
